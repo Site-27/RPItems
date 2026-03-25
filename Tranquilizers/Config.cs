@@ -14,5 +14,7 @@ namespace RPItems
 
         public float TranqDamage { get; set; } = 1f;
 
+        public float KnifeDamage { get; set; } = 15f;
+
     }
 }

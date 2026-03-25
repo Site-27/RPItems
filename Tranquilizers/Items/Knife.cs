@@ -1,4 +1,6 @@
-﻿using Exiled.API.Features.Attributes;
+﻿/*
+
+using Exiled.API.Features.Attributes;
 using Exiled.API.Features.Spawn;
 using Exiled.CustomItems.API.Features;
 using Exiled.Events.EventArgs.Scp1509;
@@ -40,7 +42,7 @@ namespace RPItems.Items
             if (!Check(ev.Player.CurrentItem))
                 return;
 
-            ev.Amount = 15;
+            ev.Amount = Plugin.Instance.Config.KnifeDamage;
         }
     }
-}
+}*/
