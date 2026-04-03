@@ -1,5 +1,4 @@
-﻿/*
-
+﻿
 using Exiled.API.Features.Attributes;
 using Exiled.API.Features.Spawn;
 using Exiled.CustomItems.API.Features;
@@ -12,7 +11,7 @@ namespace RPItems.Items
     public class Knife : CustomItem
     {
         public override uint Id { get; set; } = 53;
-        public override string Name { get; set; } = "Knife";
+        public override string Name { get; set; } = "NerfedMachete";
         public override string Description { get; set; } = "Sharp knife. Or maybe claws.";
         public override SpawnProperties SpawnProperties { get; set; }
         public override float Weight { get; set; }
@@ -39,10 +38,10 @@ namespace RPItems.Items
 
         private void OnHurting(HurtingEventArgs ev)
         {
-            if (!Check(ev.Player.CurrentItem))
+            if (!Check(ev.Attacker.CurrentItem))
                 return;
 
             ev.Amount = Plugin.Instance.Config.KnifeDamage;
         }
     }
-}*/
+}
