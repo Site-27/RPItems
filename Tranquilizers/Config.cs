@@ -10,7 +10,7 @@ namespace RPItems
         public bool IsEnabled { get; set; } = true;
 
         [Description("Whether to show debug messages in the console.")]
-        public bool Debug { get; set; } = true;
+        public bool Debug { get; set; } = false;
 
         public float TranqDamage { get; set; } = 1f;
 

@@ -4,6 +4,7 @@ using Exiled.API.Features.Spawn;
 using Exiled.CustomItems.API.Features;
 using Exiled.Events.EventArgs.Scp1509;
 using Exiled.Events.EventArgs.Player;
+using Exiled.API.Features;
 
 namespace RPItems.Items
 {
@@ -38,8 +39,14 @@ namespace RPItems.Items
 
         private void OnHurting(HurtingEventArgs ev)
         {
-            if (!Check(ev.Attacker.CurrentItem))
+            if (ev.Player == null || ev.Attacker == null || ev.Attacker.CurrentItem == null)
                 return;
+
+            if (!Check(ev.Attacker.CurrentItem))
+            {
+                Log.Debug($"Player: {ev.Player}, Attacker: {ev.Attacker}, Attacker's Item: {ev.Attacker.CurrentItem}");
+                return;
+            }
 
             ev.Amount = Plugin.Instance.Config.KnifeDamage;
         }
