@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using Exiled.API.Interfaces;
+﻿using Exiled.API.Interfaces;
 using System.ComponentModel;
 
 

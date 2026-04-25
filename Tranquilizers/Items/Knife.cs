@@ -44,10 +44,7 @@ public class Knife : CustomItem
             return;
 
         if (!Check(ev.Attacker.CurrentItem))
-        {
-            Log.Debug($"Player: {ev.Player}, Attacker: {ev.Attacker}, Attacker's Item: {ev.Attacker.CurrentItem}");
             return;
-        }
 
         ev.Amount = Plugin.Instance.Config.KnifeDamage;
     }
