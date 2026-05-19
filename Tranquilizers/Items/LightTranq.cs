@@ -18,6 +18,7 @@ public class LightTranq : CustomWeapon
     public override byte ClipSize { get; set; } = 2;
     public override float Weight { get; set; }
     public override SpawnProperties? SpawnProperties { get; set; }
+    public override bool FriendlyFire { get; set; } = true;
 
     /// <summary>
     /// Configurable via config.

@@ -16,6 +16,7 @@ public class SniperRifle : CustomWeapon
     public override string Description { get; set; } = "A modified E-11 with a scope that does more damage, but only holds one bullet at a time.";
     public override float Weight { get; set; }
     public override byte ClipSize { get; set; } = 1;
+    public override bool FriendlyFire { get; set; } = true;
     public override SpawnProperties? SpawnProperties { get; set; }
 
     public override AttachmentName[] Attachments { get; set; } =
